@@ -1,0 +1,18 @@
+﻿@page
+@model RazorRadioApi.Pages.SingleProgramModel
+@{
+}
+
+
+@foreach (var podfile in Model.ListPodfiles.Podfiles)
+{
+    <div>
+        <h2>@podfile.Title</h2>
+        <p>@podfile.Description</p>
+        <audio controls>
+            <source src="@podfile.Url" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+}
+)

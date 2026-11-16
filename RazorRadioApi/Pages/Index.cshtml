@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@foreach (var program in Model.Programs)
+{
+    <div>
+        <h2>
+            <a asp-page="SingleProgram" asp-route-id="@program.Id">
+                @program.Name
+            </a>
+        </h2>
+        <p>@program.Description</p>
+    </div>
+}
